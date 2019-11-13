@@ -1,0 +1,32 @@
+            <form action="update.php" method="post">
+                <div class="modal fade" id="alterModal<?php echo $rowId; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalCenterTitle">修改內容</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- ... -->
+                                <input type="hidden" name="guestId" value="<?php echo $rowId; ?>">
+                                <div class="form-group">
+                                    <label for="alertId">暱稱：</label>
+                                    <input type="text" class="form-control" id="alertId" name="updateName" value="<?php echo $rowName; ?>">
+                                </div>
+                                <div class="form-group">
+                                    <label for="alertMessage">留言：</label>
+                                    <textarea class="form-control" id="alertMessage" rows="3" name="updateMessage"><?php echo $rowContent; ?></textarea>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <?php echo $rowId; ?>
+                                <button type="button" class="btn btn-info" data-dismiss="modal">取消</button>
+                                <button type="submit" class="btn btn-danger">確認修改</button>
+                                <!-- <button type="button" class="btn btn-danger"><a href="update.php?id=<?php echo $rowId ?>">確認修改</a></button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>

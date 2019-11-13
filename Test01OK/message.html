@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Message</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        .guestDiv {
+            /* margin: 10%; */
+            /* padding: 10%; */
+            margin: 0px 100px;
+        }
+
+        #messageBtn {
+            text-align: right;
+        }
+
+        #deskTitle {
+            font-size: 100px;
+            text-align: center;
+        }
+
+        #alertBtn {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="guestDiv">
+
+        <div class="form-group" id="deskTitle">
+            留言板
+        </div>
+
+        <form>
+            <div class="form-group">
+                <label for="inputId">暱稱：</label>
+                <input type="email" class="form-control" id="inputId">
+            </div>
+            <div class="form-group">
+                <label for="inputMessage">留言：</label>
+                <textarea class="form-control" id="inputMessage" rows="3"></textarea>
+            </div>
+            <div class="form-group" id="messageBtn">
+                <button type="submit" class="btn btn-dark">送出</button>
+            </div>
+        </form>
+
+        <div class="card border-secondary mb-3">
+            <div class="card-header bg-transparent border-secondary">Header</div>
+            <div class="card-body">
+                <h5 class="card-title">Success card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <div class="card-footer bg-transparent border-secondary" id="alertBtn">
+                <button type="submit" class="btn btn-info btn-sm">修改</button>
+                <button type="submit" class="btn btn-danger btn-sm">刪除</button>
+            </div>
+        </div>
+
+        <div class="card border-secondary mb-3">
+            <div class="card-header bg-transparent border-secondary">Header</div>
+            <div class="card-body">
+                <h5 class="card-title">Success card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <div class="card-footer bg-transparent border-secondary" id="alertBtn">
+                <button type="submit" class="btn btn-info btn-sm">修改</button>
+                <button type="submit" class="btn btn-danger btn-sm">刪除</button>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
