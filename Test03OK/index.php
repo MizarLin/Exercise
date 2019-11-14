@@ -34,8 +34,7 @@
 
     <?php
         $oLink = mysqli_connect("localhost", "root", "", "message");
-        $sSql = "SELECT * FROM guest ORDER BY `data` DESC";
-        $oResult = mysqli_query($oLink, $sSql);
+        $oResult = mysqli_query($oLink, "SELECT * FROM guest ORDER BY `data` DESC");
         $iTotalFields=mysqli_num_fields($oResult);
         $iTotalRecords=mysqli_num_rows($oResult);
     ?>
