@@ -35,6 +35,7 @@
     <?php
         $oLink = mysqli_connect("localhost", "root", "", "message");
         $oResult = mysqli_query($oLink, "SELECT * FROM guest ORDER BY `data` DESC");
+
         $iTotalFields=mysqli_num_fields($oResult);
         $iTotalRecords=mysqli_num_rows($oResult);
     ?>
@@ -59,7 +60,7 @@
             </div>
         </form>
 
-        <?php for ($iIndex=0; $iIndex<$iTotalRecords; $iIndex++) { $aRow = mysqli_fetch_assoc($oResult); ?>
+        <?php while($aRow = mysqli_fetch_assoc($oResult)) { ?>
             <div class="card border-secondary mb-3">
                 <div class="card-header bg-transparent border-secondary"><?php echo $aRow["data"]; ?></div>
                 <div class="card-body">
